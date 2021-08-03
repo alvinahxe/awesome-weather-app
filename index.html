@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather around the World</h1>
+
+      <div class="card" style="width: 50rem;">
+        <div class="card-body">
+         
+          <form id="search-form">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="enter-city"
+                    placeholder="Enter city"
+                    id="input-user-city"
+                    autofocus
+                  />
+                </div>
+              </div>
+
+              <div class="col">
+                <button type="submit" class="btn btn-outline-primary">
+                  Search
+                </button>
+              </div>
+
+              <div class="col">
+                <button type="submit" class="btn btn-outline-secondary" id="getCurrentLocation">
+                  Current
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-4">
+              <div class="city-name" id="new-user-city">Welcome!</div>
+              <p class="today-details">
+                <span id="currentDay"></span><br />
+                <span id="currentTime"></span> <br />
+                <span id="weatherType"></span>
+              </p>
+            </div>
+
+            <div class="col">
+              <img
+                src="images/cloudy-sunny-forecast.png"
+                class="current-forecast-logo"
+                id="weather-forecast"
+              />
+            </div>
+
+            <div class="col">
+              <span class="current-temperature" id="show-temp-value"></span>
+              <span class="degree">
+                <div id="tempInCelcius">°C</div>
+                           </span>
+            </div>
+
+            <div class="col">
+              <img
+                src="images/blue-divider.png"
+                class="divider"
+                alt="divider"
+              />
+            </div>
+
+            <div class="col-2">
+              <p class="other-details">
+                 Humidity: <span id="humidity"></span> <br />
+                Wind: <span id="wind"></span>
+              </p>
+            </div>
+          </div>
+        
+
+            <hr />
+
+            <div class="row">
+              <div class="col">
+                <span class="today-is">Tue</span> <br />
+                <img
+                  src="images/cloudy-sunny-forecast.png"
+                  class="overview-forecast"
+                  alt="Thu"
+                /><br />
+                <span class="max-temp">31°</span>
+                <span class="min-temp">27°</span>
+              </div>
+              <div class="col">
+                <span class="today-is">Wed</span> <br />
+                <img
+                  src="images/cloudy-sunny-forecast.png"
+                  class="overview-forecast"
+                  alt="Thu"
+                /><br />
+                <span class="max-temp">31°</span>
+                <span class="min-temp">27°</span>
+              </div>
+              <div class="col">
+                <span class="today-is">Thu</span> <br />
+                <img
+                  src="images/cloudy-sunny-forecast.png"
+                  class="overview-forecast"
+                  alt="Thu"
+                /><br />
+                <span class="max-temp">31°</span>
+                <span class="min-temp">27°</span>
+              </div>
+              <div class="col">
+                <span class="today-is">Fri</span> <br />
+                <img
+                  src="images/rainy-forecast.png"
+                  class="overview-forecast"
+                  alt="Thu"
+                /><br />
+                <span class="max-temp">31°</span>
+                <span class="min-temp">27°</span>
+              </div>
+              <div class="col">
+                <span class="today-is">Sat</span> <br />
+                <img
+                  src="images/rainy-forecast.png"
+                  class="overview-forecast"
+                  alt="Thu"
+                /><br />
+                <span class="max-temp">31°</span>
+                <span class="min-temp">27°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Coded by Alvina Ho</h2>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
