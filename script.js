@@ -1,5 +1,5 @@
 let inputName = prompt(`What is your name?`);
-document.querySelector("#new-user-city").innerHTML = `Welcome ${inputName}`;
+document.querySelector("#new-user-city").innerHTML = `Hi ${inputName}`;
 
 //Get Data for Day, Date and Time
 
