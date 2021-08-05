@@ -53,6 +53,16 @@ function updateDetails(response) {
   document.querySelector(
     "#wind"
   ).innerHTML = `${response.data.wind.speed} km/h`;
+
+  document
+    .querySelector("#weather-forecast")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector("#weather-forecast")
+    .setAttribute("alt".response.data.weather[0].description);
 }
 
 //Get user input of city/country to reflect on app
